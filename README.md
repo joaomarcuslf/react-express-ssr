@@ -1,4 +1,4 @@
-# docker-ssr-react
+# react-express-ssr
 
 ## Getting Started:
 
