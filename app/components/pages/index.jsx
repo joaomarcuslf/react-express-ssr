@@ -3,7 +3,7 @@ import React from "react";
 class Index extends React.Component {
   constructor() {
     super();
-    this.state = { name: "João", email: "" };
+    this.state = { name: "Teste", email: "" };
   }
 
   onFormSubmit = (event) => {
