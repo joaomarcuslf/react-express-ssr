@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 class Index extends React.Component {
   constructor() {
     super();
-    this.state = { name: "Teste", email: "" };
+    this.state = { name: 'Teste', email: '' };
   }
 
   onFormSubmit = (event) => {
@@ -19,44 +19,53 @@ class Index extends React.Component {
   };
 
   render() {
+    const { name, email } = this.state;
     return (
       <div>
         <h1>Smoke -h</h1>
         <form onSubmit={this.onFormSubmit}>
           <div>
-            <label htmlFor={"name-input"} defaultValue={"Name"}>
-              Name:{" "}
+            <label htmlFor="name-input" defaultValue="Name">
+              Name:
+              {' '}
             </label>
             <input
-              name={"name-input"}
+              name="name-input"
               onChange={this.onNameChangeHandler}
-              type={"text"}
-              value={this.state.name}
+              type="text"
+              value={name}
             />
           </div>
           <br />
           <div>
-            <label htmlFor={"email-input"} defaultValue={"Email"}>
-              Email:{" "}
+            <label htmlFor="email-input" defaultValue="Email">
+              Email:
+              {' '}
             </label>
             <input
-              name={"email-input"}
+              name="email-input"
               onChange={this.onEmailChangeHandler}
-              type={"email"}
-              placeholder={"email"}
-              value={this.state.email}
+              type="email"
+              placeholder="email"
+              value={email}
             />
           </div>
           <br />
           <div>
-            <button type={"submit"}>Submit</button>
+            <button type="submit">Submit</button>
           </div>
         </form>
         <span>
-          <h5>Name: {this.state.name}</h5>
+          <h5>
+            Name:
+            {name}
+          </h5>
         </span>
         <span>
-          <h5>Email: {this.state.email}</h5>
+          <h5>
+            Email:
+            {email}
+          </h5>
         </span>
       </div>
     );
