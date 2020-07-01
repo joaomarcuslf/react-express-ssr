@@ -4,11 +4,11 @@ const config = {
   entry: {
     vendor: ["@babel/polyfill", "react"],
     index: [
-      path.resolve(__dirname, "src", "components", "entrypoints", "index.jsx")
+      path.resolve(__dirname, "app", "components", "entrypoints", "index.jsx")
     ],
   },
   output: {
-    path: path.resolve(__dirname, "src", "public"),
+    path: path.resolve(__dirname, "public"),
     filename: "[name].js",
   },
   module: {
