@@ -1,6 +1,6 @@
 import { saveCacheFile, getReactData } from './server';
 
-export const handler = (FILENAME, COMPONENT) => async (req, res) => {
+const handler = (FILENAME, COMPONENT) => async (req, res) => {
   const reactComp = await getReactData(FILENAME, COMPONENT);
 
   try {
