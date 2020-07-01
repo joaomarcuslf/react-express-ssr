@@ -1,5 +1,5 @@
 import React from 'react';
-import MainPage from '../pages/main-page.jsx';
+import App from '../pages';
 import { hydratatePage } from '../helpers/views';
 
-hydratatePage(<MainPage />, 'root');
+hydratatePage(<App />, 'root');
