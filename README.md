@@ -3,7 +3,8 @@
 ## Getting Started:
 
 ```sh
-$ yarn install
+$ sh bin/setup.sh
+$ docker-compose up
 ```
 
 ## Commands:
