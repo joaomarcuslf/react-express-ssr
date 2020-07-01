@@ -4,7 +4,7 @@
 
 ```sh
 $ sh bin/setup.sh
-$ docker-compose up
+$ sh bin/start-dev.sh
 ```
 
 ## Commands:

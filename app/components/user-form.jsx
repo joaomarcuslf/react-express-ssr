@@ -1,15 +1,17 @@
 import React from 'react';
 
+import { withTranslation } from 'react-i18next';
+
 class UserForm extends React.Component {
   constructor() {
     super();
-    this.state = { name: 'Teste', email: '', showResult: false };
+    this.state = { name: 'Teste', email: '' };
   }
 
   onFormSubmit = (event) => {
     event.preventDefault();
 
-    this.setState({ showResult: true });
+    console.log(this.state);
   };
 
   onNameChangeHandler = (event) => {
@@ -21,13 +23,16 @@ class UserForm extends React.Component {
   };
 
   render() {
-    const { name, email, showResult } = this.state;
+    const { name, email } = this.state;
+    const { t } = this.props;
+
     return (
       <div className="container is-fluid">
         <form className="form" onSubmit={this.onFormSubmit}>
           <div className="field">
             <label className="label" htmlFor="name-input" defaultValue="Name">
-              Name:
+              {t('form-name')}
+              :
 
               <div className="control">
                 <input
@@ -45,7 +50,8 @@ class UserForm extends React.Component {
 
           <div className="field">
             <label className="label" htmlFor="email-input" defaultValue="Email">
-              Email:
+              {t('form-email')}
+              :
 
               <div className="control">
                 <input
@@ -63,30 +69,12 @@ class UserForm extends React.Component {
 
           <div className="field is-grouped">
             <div className="control">
-              <button className="button is-link" type="submit">Submit</button>
+              <button className="button is-link" type="submit">{t('form-submit')}</button>
             </div>
           </div>
         </form>
-
-        {showResult ? (
-          <>
-            <span>
-              <h5>
-                Name:
-                {name}
-              </h5>
-            </span>
-            <span>
-              <h5>
-                Email:
-                {email}
-              </h5>
-            </span>
-          </>
-        )
-          : null}
       </div>
     );
   }
 }
-export default UserForm;
+export default withTranslation()(UserForm);

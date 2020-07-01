@@ -7,4 +7,4 @@ else
   npm install
 fi
 
-docker build .
+docker build -f docker/Dockerfile .
