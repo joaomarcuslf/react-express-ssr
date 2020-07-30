@@ -12,6 +12,12 @@ const defaultHeaders = {
   },
 };
 
+const buildUrl = (endpoint) => {
+  if (process.env.BASE_URL) return `${process.env.BASE_URL}/${endpoint}`;
+
+  return endpoint;
+};
+
 export const getData = (url, headers = {}) => fetch(
   url,
   {
@@ -26,7 +32,7 @@ export const getData = (url, headers = {}) => fetch(
 
 export const fetchJson = async (url, headers = {}) => {
   try {
-    const response = await fetch(url, {
+    const response = await fetch(buildUrl(url), {
       headers: {
         ...defaultHeaders,
         ...headers,
