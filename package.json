@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development run-p start:dev-server start:webpack",
-    "start": "cross-env NODE_ENV=production run-s build:front start:prod-server",
+    "start": "cross-env NODE_ENV=production yarn build:front && yarn start:prod-server",
     "lint": "eslint app --ext .js,.jsx",
     "start:dev-server": "nodemon --exec babel-node app/server.js",
     "start:prod-server": "babel-node app/server.js",
