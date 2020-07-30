@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 
-import HighlightedProjects from '../components/highlighted-projects';
+import ProjectsShowcase from '../components/projects-showcase';
 
 const mapStateToProps = (state) => ({
-  highlightedProjects: state.highlightedProjects.data || [],
+  projects: state.highlightedProjects.data || [],
 });
 
 const mapDispatchToProps = () => ({});
 
-export default connect(mapStateToProps, mapDispatchToProps)(HighlightedProjects);
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectsShowcase);

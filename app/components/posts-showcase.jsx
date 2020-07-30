@@ -4,15 +4,15 @@ import { useTranslation } from 'react-i18next';
 
 import ImagesSection from './images-section';
 
-const HighlightedPosts = ({ title, highlightedPosts }) => {
+const PostsShowCase = ({ title, posts }) => {
   const { t } = useTranslation();
 
   return (
-    highlightedPosts.length > 0
+    posts.length > 0
     && (
     <ImagesSection
       title={t(title || 'text-highlight-posts')}
-      items={highlightedPosts}
+      items={posts}
       out-sourced
       is-light
     />
@@ -20,4 +20,4 @@ const HighlightedPosts = ({ title, highlightedPosts }) => {
   );
 };
 
-export default HighlightedPosts;
+export default PostsShowCase;

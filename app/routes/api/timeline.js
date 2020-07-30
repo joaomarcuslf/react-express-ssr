@@ -13,7 +13,10 @@ const timeline = [
       ref: 'https://www.linkedin.com/school/faeterj-rio/',
     },
     tags: [],
-    description: 'Manages the social media of the FAETERJ institution.',
+    description: {
+      en: 'I worked in WebCom Team, which is an team that mantains the FAETERJ Social Medias(Facebook, Wordpress) and focus a lot on User interactions using a lot of marketing techniques, and agile praticles.',
+      pt: 'Trabalhei no Time WebCom, que é uma equipe mantenedora das mídias sociais da FAETERJ (Facebook, Wordpress), com grande nas interações com o usuário, e usando técnicas de marketing e práticas ágeis para organização.',
+    },
     startDate: '2015-08',
     endDate: '2016-4',
   },
@@ -24,12 +27,11 @@ const timeline = [
       img: 'faeterj-rio.png',
       ref: 'https://www.linkedin.com/school/faeterj-rio/',
     },
-    tags: ['JS', 'PHP', 'jQuery'],
-    description: `
-      I worked in academic applications in order to facilitate the teaching of subjects in the area of computing in colleges, using HTML / CSS and JavaScript.
-
-      I also worked using various Agile practices such as Kanban and Daily meetings, and applied XP and Scrum during the projects and Github to keep the project versioned and Open Source.
-    `,
+    tags: ['JavaScript', 'PHP', 'jQuery'],
+    description: {
+      en: 'PICT is an Technological Research Project focused on creating educational applications using technologies like HTML5, CSS3, Canvas, JavaScript. It uses pure JavaScript, has an very deep agile philosophy, using Kanban, Scrum focusing on code quality and UX/UI.',
+      pt: 'O PICT é um projeto de pesquisa tecnológica focado na criação de aplicativos educacionais usando tecnologias como HTML5, CSS3, Canvas, JavaScript. Ele usa na maior parte JavaScript puro, tem uma filosofia ágil muito profunda, usando Kanban, Scrum, com foco na qualidade do código e UX/UI.',
+    },
     startDate: '2015-11',
     endDate: '2016-11',
   },
@@ -41,12 +43,11 @@ const timeline = [
       ref:
         'https://www.linkedin.com/company/minds-at-work-sistemas-e-projetos-ltda/',
     },
-    tags: ['JS', 'Node.js', 'Angular.js', 'jQuery'],
-    description: `
-      I worked on applications using JavaScript along with other libraries and frameworks for Frontend and with C#/.net and Java/Spring in the Backend.
-
-      I also worked with agile Scrum practices using Kanban; I used Jenkins for Continuous integration and Mercurial / HG for versioning, in multidisciplinary teams for projects in different areas.
-    `,
+    tags: ['JavaScript', 'Node.js', 'Angular.js', 'jQuery'],
+    description: {
+      en: 'Minds At Work is an enterprise software developer, the I\'ve worked in different Projects from facial recognition to network simulation, we used AngularJS, jQuery, Mocha, Chai, Sinon, Istanbul, SCSS, Gulp, Websockets and others technologies.',
+      pt: 'A Minds At Work é uma desenvolvedora de software empresarial. Trabalhei em diferentes projetos, de reconhecimento facial à simulação de redes. Utilizamos AngularJS, jQuery, Mocha, Chai, Sinon, Istambul, SCSS, Gulp, Websockets e outras tecnologias.',
+    },
     startDate: '2016-05',
     endDate: '2017-01',
   },
@@ -57,12 +58,11 @@ const timeline = [
       img: 'b2w-digital.png',
       ref: 'https://www.linkedin.com/company/b2w---companhia-global-do-varejo/',
     },
-    tags: ['JS', 'React', 'Node.js'],
-    description: `
-      I participate in projects in several stages of E-Commerce using JavaScript for the development of universal and responsive applications with React and React Native for Frontend and Node.js for the Backend.
-
-      I also work with AWS services such as Elastic Beanstalk, EC2 and S3, also with Git, continuous deployment with Gitlab and Bamboo pipeline, and Agile practices such as scrum.
-    `,
+    tags: ['JavaScript', 'React', 'Node.js'],
+    description: {
+      en: 'B2W digital is the greatest E-commerce in Latina America. There we used React/Redux stack React Native for universal apps with RESTful APIs, and a lot of technologies like RestQL, a GraphQL-like implementation, and NodeJS for most of the Front-end APIs. Metric focused work, testing new feature with A/B, A/B/C tests, and it has scrum teams OKRs focused. And teams divided as Squads.',
+      pt: 'O B2W digital é o maior E-commerce da América Latina. Lá usamos a Stack de React + Redux e React Native para aplicativos universais com APIs RESTful e muitas tecnologias como RestQL, implementação semelhante ao GraphQL, e NodeJS para a maioria das APIs front-end. Trabalhamos baseados em métricas, testando novos fluxos com testes A/B, A/B/C, e possuindo OKRs focadas nas equipes com Scrum. E equipes divididas como Squads.',
+    },
     startDate: '2017-02',
     endDate: '2018-09',
   },
@@ -73,14 +73,11 @@ const timeline = [
       img: 'zoox.jpeg',
       ref: 'https://www.linkedin.com/company/zoox-smart-data-brasil/',
     },
-    tags: ['JS', 'Node.js', 'VueJS', 'Angular'],
-    description: `
-      I worked on the company's innovation team, that focuses on developing the company's newest products using the latest technologies such as Vue/Vuex for the front end and Koa.js for the back end.
-
-      The project in which I was most of the time was SmartPass, this project focuses on using recognition and data enrichment to expedite the completion and generation of the guest web check-in, so that it does not need to enter the normal hotel queue, and for the hotel client, it has access to create management reports using the captured data.
-
-      We also used some of AWS services like Elastic Beanstalk, S3, and Rekognition. As additional tools were used Git with Bitbucket and Git-flow, and agile practices such as Scrum and Kanban using Jira.
-    `,
+    tags: ['JavaScript', 'Node.js', 'VueJavaScript', 'Angular'],
+    description: {
+      en: 'Zoox is a software company focused on Big Data projects and working with the Facial recognition engines. There we use Node.js and Vue stack.',
+      pt: 'Zoox é uma empresa de software focada em projetos de Big Data e trabalhando com os mecanismos de reconhecimento facial. Lá usamos Node.js e pilha Vue.',
+    },
     startDate: '2018-09',
     endDate: '2019-12',
   },
@@ -91,8 +88,11 @@ const timeline = [
       img: 'working-minds.png',
       ref: 'https://www.linkedin.com/company/working-minds/',
     },
-    tags: ['JS', 'React', 'Node.js', 'Ruby on Rails', 'Angular', 'Ionic'],
-    description: '',
+    tags: ['JavaScript', 'React', 'Node.js', 'Ruby on Rails', 'Angular', 'Ionic'],
+    description: {
+      en: '',
+      pt: '',
+    },
     startDate: '2020-01',
     endDate: null,
   },

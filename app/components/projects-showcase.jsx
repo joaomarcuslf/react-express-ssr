@@ -4,19 +4,19 @@ import { useTranslation } from 'react-i18next';
 
 import ImagesSection from './images-section';
 
-const HighlightedProjects = ({ title, highlightedProjects }) => {
+const ProjectsShowcase = ({ title, projects }) => {
   const { t } = useTranslation();
 
   return (
-    highlightedProjects.length > 0
+    projects.length > 0
     && (
     <ImagesSection
       title={t(title || 'text-highlight-projects')}
-      items={highlightedProjects}
+      items={projects}
       is-dark
     />
     )
   );
 };
 
-export default HighlightedProjects;
+export default ProjectsShowcase;

@@ -44,7 +44,7 @@ router.get('/*', async (req, res) => Promise.all([
       data: highlightedSkillsData,
     },
     timeline: {
-      activeIndex: timelineData.length - 1,
+      activeIndex: null,
       data: timelineData,
     },
   };

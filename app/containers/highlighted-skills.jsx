@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 
-import HighlightedSkills from '../components/highlighted-skills';
+import SkillsShowcase from '../components/skills-showcase';
 
 const mapStateToProps = (state) => ({
-  highlightedSkills: state.highlightedSkills.data || [],
+  skills: state.highlightedSkills.data || [],
 });
 
 const mapDispatchToProps = () => ({});
 
-export default connect(mapStateToProps, mapDispatchToProps)(HighlightedSkills);
+export default connect(mapStateToProps, mapDispatchToProps)(SkillsShowcase);

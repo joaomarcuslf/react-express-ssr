@@ -7,6 +7,7 @@ import Banner from '../components/banner';
 import HighlitedSkills from '../containers/highlighted-skills';
 import HighlitedPosts from '../containers/highlighted-posts';
 import HighlitedProjects from '../containers/highlighted-projects';
+import Timeline from '../containers/timeline';
 
 const MainPage = () => {
   const { t } = useTranslation();
@@ -18,6 +19,8 @@ const MainPage = () => {
         subtitle={t('text-main-subtitle')}
         is-info
       />
+
+      <Timeline />
 
       <HighlitedSkills />
 

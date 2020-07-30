@@ -4,15 +4,15 @@ import { useTranslation } from 'react-i18next';
 
 import SkillsSection from './skills-section';
 
-const HighlightedSkills = ({ title, highlightedSkills, seeMore = true }) => {
+const SkillsShowcase = ({ title, skills, seeMore = true }) => {
   const { t } = useTranslation();
 
   return (
-    highlightedSkills.length > 0
+    skills.length > 0
     && (
     <SkillsSection
       title={t(title || 'text-highlight-skills')}
-      items={highlightedSkills}
+      items={skills}
       seeMore={seeMore}
       out-sourced
       is-dark
@@ -21,4 +21,4 @@ const HighlightedSkills = ({ title, highlightedSkills, seeMore = true }) => {
   );
 };
 
-export default HighlightedSkills;
+export default SkillsShowcase;

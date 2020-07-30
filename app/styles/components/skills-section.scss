@@ -26,9 +26,9 @@
     background-color: $light-gray-25;
   }
 
-  .images-section-group > .images-section-item {
+  .skills-section-group > .skills-section-item {
     @include is-even {
-      .card {
+      &.card {
         background-color: $lightest-gray-25;
       }
     }

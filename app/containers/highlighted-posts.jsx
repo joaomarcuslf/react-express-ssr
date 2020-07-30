@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 
-import HighlightedPosts from '../components/highlighted-posts';
+import PostsShowcase from '../components/posts-showcase';
 
 const mapStateToProps = (state) => ({
-  highlightedPosts: state.highlightedPosts.data || [],
+  posts: state.highlightedPosts.data || [],
 });
 
 const mapDispatchToProps = () => ({});
 
-export default connect(mapStateToProps, mapDispatchToProps)(HighlightedPosts);
+export default connect(mapStateToProps, mapDispatchToProps)(PostsShowcase);

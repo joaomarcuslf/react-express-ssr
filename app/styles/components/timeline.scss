@@ -1,0 +1,191 @@
+@import "../settings/settings";
+
+@import "../tools/truncate";
+@import "../tools/opacity-animate";
+@import "../tools/medias-queries/all";
+@import "../tools/is-even";
+@import "../tools/not-last";
+
+@import "../generics/vertical-center-container";
+@import "../generics/horizontal-center-container";
+
+.timeline {
+  .timeline-content {
+
+    position: relative;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .initial-date, .final-date {
+      font-weight: bold;
+    }
+
+    .initial-date {
+      transform: rotate(270deg) scaleX(1);
+      position: absolute;
+      left: 0;
+      top: 30%;
+
+      @include for-tablet-portrait-and-down {
+        left: -2rem;
+      }
+    }
+
+    .timeline-bar {
+      height: 5px;
+
+      @include for-tablet-landscape-and-down {
+        width: 85%;
+      }
+    }
+
+    .final-date {
+      transform: rotate(90deg) scaleX(1);
+      position: absolute;
+      right: 0;
+      top: 30%;
+
+      @include for-tablet-portrait-and-down {
+        right: -2rem;
+      }
+    }
+
+    .timeline-bar, .events {
+      width: 90%;
+      @include for-tablet-landscape-and-down {
+        width: 85%;
+      }
+    }
+
+    .events {
+      display: flex;
+      position: absolute;
+      left: 4rem;
+      justify-content: space-around;
+
+      .event {
+        flex: 1;
+        height: 75px;
+        width: 75px;
+        border-radius: 100%;
+        background: transparent;
+        cursor: pointer;
+        border: unset;
+
+        .timeline-company-image {
+          height: 60px;
+          width: 60px;
+          border: 3px solid;
+          border-radius: 100%;
+
+          transition: border 0.2s linear, width 0.2s linear, height 0.2s linear;
+        }
+
+        &:hover, &.is-active {
+          .timeline-company-image {
+            height: 75px;
+            width: 75px;
+            border: 5px solid;
+          }
+        }
+      }
+
+      @include for-tablet-portrait-and-down {
+        left: 1.75rem;
+
+        .event {
+          height: 50px;
+          width: 50px;
+
+          .timeline-company-image {
+            height: 40px;
+            width: 40px;
+            border: 2px solid;
+          }
+
+          &:hover, &.is-active {
+            .timeline-company-image {
+              height: 50px;
+              width: 50px;
+              border: 3px solid;
+            }
+          }
+        }
+      }
+
+      @include for-phone-only {
+        left: 1.25rem;
+
+        .event {
+          height: 30px;
+          width: 30px;
+
+          .timeline-company-image {
+            height: 25px;
+            width: 25px;
+            border: 2px solid;
+          }
+
+          &:hover, &.is-active {
+            .timeline-company-image {
+              height: 30px;
+              width: 30px;
+              border: 3px solid;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .timeline-event-description {
+    padding-top: .5rem;
+    .card {
+      background-color: $lightest-gray;
+
+      .title {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.is-dark {
+    background-color: $darker-gray !important;
+
+    .timeline-title,
+    .timeline-subtitle,
+    .initial-date,
+    .final-date {
+      color: $lighter-gray-75;
+    }
+
+    .timeline-bar {
+      background-color: $lighter-gray-75;
+    }
+
+    .timeline-company-image {
+      border-color: $lighter-gray-75;
+    }
+  }
+
+  &.is-light {
+    background-color: $lightest-gray-25 !important;
+
+    .timeline-title,
+    .timeline-subtitle,
+    .initial-date,
+    .final-date {
+      color: $darker-gray-75;
+    }
+
+    .timeline-bar {
+      background-color: $darker-gray-75;
+    }
+
+    .timeline-company-image {
+      border-color: $darker-gray-75;
+    }
+  }
+}
