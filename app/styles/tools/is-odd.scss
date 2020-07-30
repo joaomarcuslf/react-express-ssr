@@ -1,0 +1,5 @@
+@mixin is-odd {
+  &:nth-child(odd) {
+    @content;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../../settings/settings";
+
+@mixin for-tablet-landscape-and-down {
+  @media (max-width: $size-desktop - 1px) { @content; }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: $size-landscape-tablet) { @content; }
+}

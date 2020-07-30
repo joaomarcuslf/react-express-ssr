@@ -19,6 +19,7 @@ plugins:
 rules: {
   "no-console": "off",
   "global-require": "off",
+  "no-underscore-dangle": "off",
   "import/no-unresolved": "off",
   "import/extensions": "off",
   "import/prefer-default-export": "off",

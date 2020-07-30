@@ -1,0 +1,13 @@
+@import "../settings/settings";
+
+@import "../tools/medias-queries/all";
+
+.hero {
+  .hero-body {
+    padding: 3rem;
+
+    @include for-tablet-landscape-and-down {
+      padding: 3rem 1.5rem;
+    }
+  }
+}

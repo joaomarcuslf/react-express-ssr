@@ -1,0 +1,10 @@
+@import "../../../settings/settings";
+
+@mixin for-desktop-and-down {
+  @media (max-width: $size-big-screen - 1px) { @content; }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: $size-desktop) { @content; }
+}
+

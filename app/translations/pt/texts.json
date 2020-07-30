@@ -1,0 +1,24 @@
+{
+  "text": {
+    "main-title": "Olá, eu sou João Marcus Fernandes",
+    "main-subtitle": "Sou desenvolvedor web Full-stack. Formado em Análise e desenvolvimento de sistemas na Faeterj-RIO.",
+
+    "posts-title": "Página de Artigos",
+    "posts-subtitle": "Algumas postagens e apresentações que escrevi.",
+
+    "projects-title": "Página de Projetos",
+    "projects-subtitle": "Alguns projetos que acredito que valem a pena ser mostrados.",
+
+    "about-me-title": "Sobre mim",
+    "about-me-subtitle": "Um resumo sobre mim.",
+
+    "highlight-posts": "Artigos em Destaque",
+    "highlight-projects": "Projetos em Destaque",
+    "highlight-skills": "Habilidades em Destaque",
+    "posts": "Artigos",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "timeline": "Linha do Tempo de Trabalho",
+    "see-more": "Veja mais..."
+  }
+}

@@ -1,3 +1,6 @@
+import { LANGUAGE_KEY } from '../constants/storage';
+import { CookieStorage } from './storage';
+
 export const formatTranslation = (translations) => (
   Object.keys(translations).reduce((acc, primaryKey) => {
     const secondaryKeys = Object.keys(translations[primaryKey]);
@@ -10,3 +13,11 @@ export const formatTranslation = (translations) => (
     return { ...acc, ...newObj };
   }, {})
 );
+
+export const setLanguage = (language) => new Promise((resolve) => {
+  CookieStorage.set(LANGUAGE_KEY, language);
+
+  resolve();
+});
+
+export const getLanguage = () => CookieStorage.get(LANGUAGE_KEY);

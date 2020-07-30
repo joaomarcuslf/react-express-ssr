@@ -1,0 +1,8 @@
+
+@import "../generics/flex-container";
+
+.horizontal-center-container {
+  @extend .flex-container;
+
+  align-items: center;
+}

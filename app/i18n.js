@@ -4,18 +4,22 @@ import { initReactI18next } from 'react-i18next';
 import en from './translations/en';
 import pt from './translations/pt';
 
-i18next
-  .use(initReactI18next) // passes i18n down to react-i18next
-  .init({
-    resources: {
-      en,
-      pt,
-    },
+import { getLanguage } from './helpers/translations';
 
-    lng: 'en',
-    fallbackLng: 'en',
+export default function i18n(language) {
+  i18next
+    .use(initReactI18next) // passes i18n down to react-i18next
+    .init({
+      resources: {
+        en,
+        pt,
+      },
 
-    interpolation: {
-      escapeValue: false,
-    },
-  });
+      lng: getLanguage() || language || 'en',
+      fallbackLng: 'en',
+
+      interpolation: {
+        escapeValue: false,
+      },
+    });
+}

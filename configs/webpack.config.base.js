@@ -1,6 +1,7 @@
-const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const TerserJSPlugin = require('terser-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const pathsConfig = require('./paths.config');
 
@@ -16,6 +17,9 @@ module.exports = {
   resolve: {
     modules: [__dirname, 'node_modules'],
     extensions: ['.js', '.jsx', '.json', '.wasm', '.mjs', '*'],
+  },
+  optimization: {
+    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
   plugins: [
     new CopyPlugin([
@@ -44,6 +48,10 @@ module.exports = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development',
+              reloadAll: true,
+            },
           },
           { loader: 'css-loader' },
           {
@@ -89,6 +97,12 @@ module.exports = {
         options: {
           outputPath: 'xml',
         },
+      },
+      {
+        enforce: 'pre',
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
       },
       {
         test: /\.(js|jsx)$/,

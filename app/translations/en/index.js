@@ -1,15 +1,20 @@
 import { formatTranslation } from '../../helpers/translations';
 
-import menu from './menu.json';
-import intro from './intro.json';
-import language from './language.json';
-import form from './form.json';
+import buttons from './buttons.json';
+import inputs from './inputs.json';
+import languages from './languages.json';
+import texts from './texts.json';
+import others from './others.json';
 
 export default {
-  translation: formatTranslation({
-    ...menu,
-    ...language,
-    ...intro,
-    ...form,
-  }),
+  translation: {
+
+    ...formatTranslation({
+      ...buttons,
+      ...inputs,
+      ...languages,
+      ...texts,
+    }),
+    ...others,
+  },
 };

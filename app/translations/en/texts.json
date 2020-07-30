@@ -1,0 +1,24 @@
+{
+  "text": {
+    "main-title": "Hi, I'm João Marcus Fernandes",
+    "main-subtitle": "I'm Full-stack web developer. Graduated at Analysis and development of systems on Faeterj-RIO.",
+
+    "posts-title": "Posts Page",
+    "posts-subtitle": "Some of posts and presentations that I have written.",
+
+    "projects-title": "Projects Page",
+    "projects-subtitle": "Some projects I believe is worth to be shown.",
+
+    "about-me-title": "About Me",
+    "about-me-subtitle": "Some summary about me.",
+
+    "highlight-posts": "Highlighted Posts",
+    "highlight-projects": "Highlighted Projects",
+    "highlight-skills": "Highlighted Skills",
+    "posts": "Posts",
+    "projects": "Projects",
+    "skills": "Skills",
+    "timeline": "Work Timeline",
+    "see-more": "See more..."
+  }
+}

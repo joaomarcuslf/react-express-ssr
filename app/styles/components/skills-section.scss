@@ -1,0 +1,133 @@
+@import "../settings/settings";
+
+@import "../tools/truncate";
+@import "../tools/opacity-animate";
+@import "../tools/medias-queries/all";
+@import "../tools/is-even";
+@import "../tools/not-last";
+
+@import "../generics/vertical-center-container";
+@import "../generics/horizontal-center-container";
+
+.skills-section {
+  .hero-body > * {
+    padding: .5rem 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .card {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: $light-gray-25;
+  }
+
+  .images-section-group > .images-section-item {
+    @include is-even {
+      .card {
+        background-color: $lightest-gray-25;
+      }
+    }
+  }
+
+  .skills-section-title {
+    @extend .title;
+
+    font-size: 2rem;
+    margin-bottom: 0 !important;
+  }
+
+  .skills-section-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+
+    @include for-tablet-landscape-and-down {
+      flex-direction: row;
+    }
+
+    .skills-section-item {
+      @extend .horizontal-center-container;
+
+      @include for-tablet-landscape-up {
+        max-width: 30%;
+        width: 32%;
+        padding: .5rem;
+      }
+
+      opacity: 0.8;
+
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: flex-end;
+      margin: .5rem;
+
+      @include for-desktop-up {
+        width: 32%;
+
+        padding: .5rem;
+
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      @include for-tablet-landscape-and-down {
+        opacity: 1;
+        width: 50%;
+
+        @include not-last {
+          padding-bottom: 1.5rem;
+
+          @include is-even {
+            padding-left: .5rem;
+          }
+
+          @include is-odd {
+            padding-right: .5rem;
+          }
+        }
+      }
+
+      @include for-tablet-portrait-and-down {
+        width: 100%;
+      }
+
+      &:hover {
+        @include opacity-animate(0.1s, 0.8, 1);
+      }
+
+      .card-content {
+        width: 100%;
+      }
+    }
+  }
+
+  &.is-dark {
+    background-color: $darker-gray !important;
+
+    .skills-section-title,
+    .skills-section-subtitle {
+      color: $lighter-gray-75;
+    }
+  }
+
+  &.is-light {
+    background-color: $lightest-gray-25 !important;
+
+    .skills-section-title,
+    .skills-section-subtitle {
+      color: $darker-gray-75;
+    }
+  }
+}

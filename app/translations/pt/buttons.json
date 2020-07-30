@@ -1,0 +1,8 @@
+{
+  "button": {
+    "home": "Principal",
+    "posts": "Artigos",
+    "projects": "Projetos",
+    "about-me": "Sobre Mim"
+  }
+}

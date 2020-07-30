@@ -1,0 +1,100 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("/fonts/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: FiraCode;
+  src: url("/fonts/FiraCode-Medium.ttf");
+}
+
+$family-primary: Montserrat, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-secondary: FiraCode, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-code: FiraCode;
+
+$medium-gray:          #5A758C;
+$medium-gray-25:       #5A758C40;
+$medium-gray-50:       #5A758C80;
+$medium-gray-75:       #5A758CC0;
+
+$light-gray:           #ADC5D9;
+$light-gray-25:        #ADC5D940;
+$light-gray-50:        #ADC5D980;
+$light-gray-75:        #ADC5D9C0;
+
+$lighter-gray:         #D2E1EE;
+$lighter-gray-25:      #D2E1EE40;
+$lighter-gray-50:      #D2E1EE80;
+$lighter-gray-75:      #D2E1EEC0;
+
+$lightest-gray:        #DFEDF8;
+$lightest-gray-25:     #DFEDF840;
+$lightest-gray-50:     #DFEDF880;
+$lightest-gray-75:     #DFEDF8C0;
+
+$dark-gray:            #223440;
+$dark-gray-25:         #22344040;
+$dark-gray-50:         #22344080;
+$dark-gray-75:         #223440C0;
+
+$darker-gray:          #314A59;
+$darker-gray-25:       #314a5940;
+$darker-gray-50:       #314A5980;
+$darker-gray-75:       #314A59C0;
+
+$darkest-gray:         #152026;
+$darkest-gray-25:      #15202640;
+$darkest-gray-50:      #15202680;
+$darkest-gray-75:      #152026C0;
+
+$primary:              $medium-gray;
+$secondary:            $light-gray;
+
+$info:                 #2D2A8C80;
+$success:              #35848C80;
+$warning:              #F2A03D80;
+$danger:               #D96A6A80;
+
+$light:                $light-gray;
+$dark:                 $darkest-gray;
+
+$scheme-main:          $lightest-gray-25;
+$scheme-main-bis:      $lightest-gray-50;
+$scheme-main-ter:      $lightest-gray-75;
+
+$background:           $lightest-gray-25;
+
+$border:               $darker-gray-50;
+$border-hover:         $darker-gray-75;
+$border-light:         $darkest-gray-50;
+$border-light-hover:   $darkest-gray-75;
+
+$text:                 $darker-gray;
+$text-light:           $darkest-gray;
+$text-strong:          $darkest-gray;
+
+$code:                 #98C379;
+$code-background:      #4B5263;
+$pre:                  #E06C75;
+$pre-background:       #282C34;
+
+$link:                 $light-gray;
+$link-visited:         $dark-gray;
+$link-hover:           $lightest-gray;
+$link-hover-border:    $lightest-gray-50;
+$link-focus:           $dark-gray-50;
+$link-focus-border:    $lightest-gray;
+$link-active:          $darker-gray-50;
+$link-active-border:   $lightest-gray;
+
+$size-small: 0.75rem;
+$size-normal: 1rem;
+$size-medium: 1.25rem;
+$size-large: 1.5rem;
+
+
+$size-big-screen: 1800px;
+$size-desktop: 1200px;
+$size-landscape-tablet: 900px;
+$size-portrait-tablet: 600px;
+$size-phone: 480px;

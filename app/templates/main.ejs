@@ -5,11 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>React with SSR and Docker</title>
+    <meta name="description" content="My professional page and preview app. It is build in React and Express for SSR and API, powered by Redux, MongoDB and Docker.">
+    <link rel="canonical" href="http://joaomarcuslf.io/" />
+    <meta name="robot" content="all">
+    <meta name=”robots” content=”index,follow”>
+    <meta name="keywords" content="Developer, Front-end, Full-stack, React, Javascript, Joaomarcuslf">
+    <meta name="abstract" content="My presentation website as Web developer and designer">
+    <meta name="author" content="João Marcus de Lemos Fernandes">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="language" content="en,pt">
+
+    <title>@joaomarcuslf.io - Full-stack Web developer</title>
+
+    <link rel="icon" href="/images/logo-hex.png" />
     <link rel="stylesheet" href="/index.css">
   </head>
-  <body>
+
+  <body class="vsc-initialized has-navbar-fixed-top">
     <div id="root"><%- reactApp %></div>
+
+    <script>
+      // WARNING: See the following for security issues around embedding JSON in HTML:
+      // https://redux.js.org/recipes/server-rendering/#security-considerations
+      window.__PRELOADED_STATE__ = <%- JSON.stringify(preloadedState).replace(/</g,'\\u003c') %>
+    </script>
+
     <script src="/index.js" charset="utf-8"></script>
     <script src="/vendor.js" charset="utf-8"></script>
   </body>

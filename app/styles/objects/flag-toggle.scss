@@ -1,0 +1,32 @@
+@import "../settings/settings";
+
+@import "tools/square-box";
+
+@import "../generics/vertical-center-container";
+@import "../generics/horizontal-center-container";
+
+.flag-toggle {
+  @extend .vertical-center-container;
+
+  width: 4vw;
+  justify-content: space-between;
+  border-radius: 100%;
+  height: 100%;
+
+  .flag-item {
+    border-radius: 100%;
+    background: transparent;
+    border: none;
+    padding: 0;
+    border: 2.5px solid transparent;
+
+    &.is-active {
+      border: 2.5px solid $lighter-gray-50;
+    }
+
+    img {
+      border-radius: 100%;
+      @include square-box(30px);
+    }
+  }
+}

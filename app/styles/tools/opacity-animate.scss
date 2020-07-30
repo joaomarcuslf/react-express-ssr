@@ -1,0 +1,13 @@
+@mixin opacity-animate($time, $initial, $final) {
+  @keyframes animate-opacity {
+    0%   { opacity: $initial; }
+    100% { opacity: $final; }
+  }
+
+  -webkit-animation: animate-opacity $time ease-in;
+  -moz-animation:    animate-opacity $time ease-in;
+  -o-animation:      animate-opacity $time ease-in;
+  animation:         animate-opacity $time ease-in;
+
+  opacity: $final;
+}

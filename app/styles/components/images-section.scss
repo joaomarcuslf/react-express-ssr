@@ -1,0 +1,128 @@
+@import "../settings/settings";
+
+@import "../tools/truncate";
+@import "../tools/opacity-animate";
+@import "../tools/medias-queries/all";
+@import "../tools/is-even";
+@import "../tools/not-last";
+
+@import "../generics/vertical-center-container";
+@import "../generics/horizontal-center-container";
+
+.images-section {
+  .hero-body > * {
+    padding: .5rem 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .images-section-title {
+    @extend .title;
+
+    font-size: 2rem;
+    margin-bottom: 0 !important;
+  }
+
+  .images-section-subtitle {
+    @extend .subtitle;
+
+    @include truncate-text(95%);
+
+    font-size: 1.5rem;
+  }
+
+  .images-section-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+
+    @include for-tablet-landscape-and-down {
+      flex-direction: row;
+    }
+
+    .images-section-item {
+      @extend .horizontal-center-container;
+
+      @include for-tablet-landscape-up {
+        max-width: 30%;
+      }
+
+      opacity: 0.8;
+
+      display: flex;
+      flex-direction: column;
+
+      flex: 1;
+      align-items: center;
+      justify-content: flex-end;
+
+      @include for-desktop-up {
+        width: 32%;
+
+        padding: 0 .5rem;
+
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      @include for-tablet-landscape-and-down {
+        opacity: 1;
+        width: 50%;
+
+        @include not-last {
+          padding-bottom: 1.5rem;
+
+          @include is-even {
+            padding-left: .5rem;
+          }
+
+          @include is-odd {
+            padding-right: .5rem;
+          }
+        }
+      }
+
+      @include for-tablet-portrait-and-down {
+        width: 100%;
+      }
+
+      &:hover {
+        @include opacity-animate(0.1s, 0.8, 1);
+      }
+
+      .images-section-image {
+        width: 100%;
+        max-height: 240px;
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  &.is-dark {
+    background-color: $darker-gray !important;
+
+    .images-section-title,
+    .images-section-subtitle {
+      color: $lighter-gray-75;
+    }
+  }
+
+  &.is-light {
+    background-color: $lightest-gray-25 !important;
+
+    .images-section-title,
+    .images-section-subtitle {
+      color: $darker-gray-75;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../tools/medias-queries/fixed-sizes/big-desktop";
+@import "../../tools/medias-queries/fixed-sizes/desktop";
+@import "../../tools/medias-queries/fixed-sizes/tablet-landscape";
+@import "../../tools/medias-queries/fixed-sizes/tablet-portrait";
+@import "../../tools/medias-queries/fixed-sizes/phone";
+
+@import "../../tools/medias-queries/custom-media";
+
+/*
+  How to use:
+  .header-title {
+    font-size: 2rem;
+
+    @include for-phone-only {
+        font-size: 1rem;
+    }
+  }
+
+  @include for-big-desktop-only {}
+  @include for-desktop-and-down {}
+  @include for-desktop-up {}
+  @include for-tablet-landscape-and-down {}
+  @include for-tablet-landscape-up {}
+  @include for-tablet-portrait-and-down {}
+  @include for-tablet-portrait-up {}
+  @include for-phone-only {}
+
+  @include media-query('phone') {
+  @include media-query('tablet-portrait') {
+  @include media-query('tablet-landscape') {
+  @include media-query('desktop') {
+  @include media-query('big-screen') {
+*/

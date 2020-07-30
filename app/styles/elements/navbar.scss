@@ -1,0 +1,50 @@
+@import "../settings/settings";
+
+@import "../tools/medias-queries/all";
+
+.navbar {
+  &.is-active {
+    @include for-phone-only {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+  }
+
+  .navbar-burger {
+    background: transparent;
+    border: 1px solid transparent;
+  }
+
+  .navbar-menu {
+    &.is-active {
+      @include for-phone-only {
+        position: inherit;
+        height: 100vh;
+        width: 100vw;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navbar-start {
+        @include for-phone-only {
+        }
+      }
+
+      .navbar-end {
+        @include for-phone-only {
+        }
+      }
+    }
+
+    .navbar-item {
+      &.is-active {
+        @include for-phone-only {
+          background-color: rgba(223,237,248,.1);
+        }
+      }
+    }
+  }
+}
