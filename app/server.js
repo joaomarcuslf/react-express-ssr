@@ -44,14 +44,13 @@ app.use('/api', skillsRoutes);
 app.use('/', viewRoutes);
 
 const PORT = process.env.PORT || 3000;
-const IP_BIND = process.env.IP || '0.0.0.0';
 
-app.listen(PORT, IP_BIND, () => {
+app.listen(PORT, () => {
   console.log(`
   => Starting ${pjson.name}
   => Node ${pjson.engines.node} application starting in ${process.env
   .NODE_ENV || 'development'}
-  * Listening on http://${IP_BIND}:${PORT}/
+  * Listening on http://localhost:${PORT}/
   * Environment: ${process.env.NODE_ENV || 'development'}
   * Npm version: ${pjson.engines.npm}
   Use Ctrl-C to stop
