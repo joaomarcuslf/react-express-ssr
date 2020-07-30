@@ -29,7 +29,12 @@ app.use(compression());
 app.use(cookieParser());
 app.use(morgan('dev'));
 
-app.use(express.static(`${__dirname}/../public`));
+app.use(
+  express.static(`${__dirname}/../public`),
+  process.env.NODE_ENV === 'production'
+    ? { maxAge: '86400000' }
+    : {},
+);
 
 // View engine setup
 app.set('views', path.join(__dirname, 'templates'));
