@@ -30,10 +30,10 @@ app.use(cookieParser());
 app.use(morgan('dev'));
 
 app.use(
-  express.static(`${__dirname}/../public`),
-  process.env.NODE_ENV === 'production'
-    ? { maxAge: '86400000' }
-    : {},
+  express.static(
+    `${__dirname}/../public`,
+    process.env.NODE_ENV === 'production' ? { maxAge: '86400000' } : {},
+  ),
 );
 
 // View engine setup
@@ -54,8 +54,9 @@ const IP_BIND = process.env.IP || '0.0.0.0';
 app.listen(PORT, IP_BIND, () => {
   console.log(`
   => Starting ${pjson.name}
-  => Node ${pjson.engines.node} application starting in ${process.env
-  .NODE_ENV || 'development'}
+  => Node ${pjson.engines.node} application starting in ${
+  process.env.NODE_ENV || 'development'
+}
   * Listening on http://${IP_BIND}:${PORT}/
   * Environment: ${process.env.NODE_ENV || 'development'}
   * Npm version: ${pjson.engines.npm}
